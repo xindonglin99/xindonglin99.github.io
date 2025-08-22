@@ -1,5 +1,6 @@
 import { ArrowUpRight } from "lucide-react";
 import { News } from "@/data/news";
+import Image from "next/image";
 
 export function NewsEntry({ news }: { news: News }) {
   return (
@@ -25,6 +26,19 @@ export function NewsEntry({ news }: { news: News }) {
           )}
         </h3>
         <p className="text-sm text-zinc-600">{news.description}</p>
+      </div>
+      <div className="flex flex-row gap-4">
+        {news.imageUrl && (
+                <div className="w-1/4 min-w-[160px] relative">
+                  <Image
+                    src={news.imageUrl}
+                    alt={news.title}
+                    width={160}
+                    height={200}
+                    className="rounded-lg"
+                  />
+                </div>
+              )}
       </div>
     </div>
   );

@@ -11,9 +11,9 @@ export interface Portfolio {
 export const portfolioData: Portfolio[] = [
   // Example entry
   {
-    title: "Learning to boulder (Ongoing)",
+    title: "Learning to plan in bouldering (Ongoing)",
     description:
-      "This project combines a high-level planner with a low-level controller to solve hard bouldering problems. The picture is a toy example on a donut wall. More updates incoming!",
+      "This project trys to learn a high-level planner that accounts for both the capability of the low-level controller and the hand hold pattern to solve hard bouldering problems. The picture is a toy example on a donut wall. More updates incoming!",
     technologies: ["RL", "IsaacLab", "Planning"],
     // projectUrl: "https://project-demo.com",
     imageUrl:
