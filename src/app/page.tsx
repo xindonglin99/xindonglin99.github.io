@@ -11,6 +11,7 @@ import { experienceData } from "@/data/experience";
 import { PortfolioEntry } from "@/components/portfolio-entry";
 import { portfolioData } from "@/data/portfolio";
 import { sectionOrder, Section } from "@/data/section-order";
+import { footerData } from "@/data/footer";
 
 export default function Home() {
   return (
@@ -132,6 +133,10 @@ export default function Home() {
                   return null;
               }
             })}
+
+            <footer className="pt-12 text-sm text-zinc-400 font-serif">
+              {footerData.text} {footerData.date}
+            </footer>
           </div>
         </div>
       </div>

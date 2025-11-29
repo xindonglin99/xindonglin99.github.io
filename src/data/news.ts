@@ -9,10 +9,10 @@ export interface News {
 export const newsData: News[] = [
   // If you don't want to show news, just make the array empty.
   {
-    date: "Jul 2025",
-    title: "Upcoming colleboration at HighTorque Robotics",
-    description: "I'll be working on a robot demo with the HighTorque Robotics team on their humanoid robots Mini-Pi/Mini-Hi during September. Here is a picture of the cute robot!", 
-    link: "https://www.hightorquerobotics.com/",
+    date: "Nov 2025",
+    title: "Mini-Pi-Plus with MimicKit",
+    description: "I created a demo of Mini-Pi-Plus using Xue Bin's new codebase MimicKit. Check out the link for more details! Mini-Pi-Plus on the right.", 
+    link: "https://github.com/xbpeng/MimicKit/blob/main/data/envs/deepmimic_pi_plus_env.yaml",
     imageUrl: "/images/mini-hi.png",
   }
 ];
