@@ -53,4 +53,11 @@ export const portfolioData: Portfolio[] = [
       "/images/max.jpg",
     codeUrl: "https://github.com/xindonglin99/Geometric-modeling-algos",
   },
+
+  {
+    title: "Local smoothness layer for implicit coordinate learning",
+    description: "This project aims to reconstruct 1D/2D/3D signals using neural networks, with an adaptive focus (LS-Layer) on different levels of detail in different regions.",
+    imageUrl: "/images/2d_comparison_tokyo.png",
+    paperUrl: ["Report", "/pdfs/report.pdf"],
+  },
 ];
