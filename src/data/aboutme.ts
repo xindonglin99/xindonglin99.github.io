@@ -37,5 +37,5 @@ export const aboutMe: AboutMe = {
   // cvUrl: "/pdfs/cv.pdf",
   institutionUrl: "https://www.cs.ubc.ca/",
   // altName: "Character animation and robotics",
-  secretDescription: "'Good artists copy; great artists steal.' - Pablo Picasso",
+  secretDescription: "\"Control is hard.\" - Michiel van de Panne",
 };
