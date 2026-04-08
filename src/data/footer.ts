@@ -1,4 +1,4 @@
 export const footerData = {
   text: "Last updated",
-  date: "November 28, 2025",
+  date: "April 8, 2026",
 };
