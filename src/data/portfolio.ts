@@ -13,7 +13,7 @@ export const portfolioData: Portfolio[] = [
   {
     title: "Learning to plan in bouldering (Ongoing)",
     description:
-      "This project trys to learn a high-level planner that accounts for both the capability of the low-level controller and the hand hold pattern to solve hard bouldering problems. The picture is a toy example on a donut wall. More updates incoming!",
+      "This project tries to learn a high-level planner that accounts for both the capability of the low-level controller and the hand hold pattern to solve hard bouldering problems. The picture is a toy example on a donut wall. More updates incoming!",
     technologies: ["RL", "IsaacLab", "Planning"],
     // projectUrl: "https://project-demo.com",
     imageUrl:
