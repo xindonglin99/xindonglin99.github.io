@@ -61,6 +61,9 @@ export default function Home() {
                           {newsData.map((news, index) => (
                             <ScrollReveal key={index} delay={(index + 1) * 80}>
                               <NewsEntry news={news} />
+                              {index < newsData.length - 1 && (
+                                <div className="h-px bg-zinc-200 my-8" />
+                              )}
                             </ScrollReveal>
                           ))}
                         </div>
@@ -80,6 +83,9 @@ export default function Home() {
                           {educationData.map((education, index) => (
                             <ScrollReveal key={index} delay={(index + 1) * 80}>
                               <EducationEntry education={education} />
+                              {index < educationData.length - 1 && (
+                                <div className="h-px bg-zinc-200 my-8" />
+                              )}
                             </ScrollReveal>
                           ))}
                         </div>
@@ -114,13 +120,16 @@ export default function Home() {
                       <section key={sectionName}>
                         <ScrollReveal>
                           <h2 className="font-serif text-md mb-12 tracking-wide uppercase">
-                            Experience
+                            Work Experience
                           </h2>
                         </ScrollReveal>
                         <div className="space-y-12">
                           {experienceData.map((experience, index) => (
                             <ScrollReveal key={index} delay={(index + 1) * 80}>
                               <ExperienceEntry experience={experience} />
+                              {index < experienceData.length - 1 && (
+                                <div className="h-px bg-zinc-200 my-8" />
+                              )}
                             </ScrollReveal>
                           ))}
                         </div>
@@ -140,6 +149,9 @@ export default function Home() {
                           {portfolioData.map((portfolio, index) => (
                             <ScrollReveal key={index} delay={(index + 1) * 80}>
                               <PortfolioEntry portfolio={portfolio} />
+                              {index < portfolioData.length - 1 && (
+                                <div className="h-px bg-zinc-200 my-8" />
+                              )}
                             </ScrollReveal>
                           ))}
                         </div>

@@ -21,7 +21,7 @@ export const publicationData: Publication[] = [
     paperUrl: "https://dl.acm.org/doi/10.1145/3680528.3687702",
     // codeUrl: "https://github.com/jsmith/scalable-causal-discovery",
     //bibtex: "https://arxiv.org/abs/2409.15476.bib",
-    tldr: "This paper proposes and evaluates a system, EMob, for estimating body motion under clothing using a combination of very small electromagnetic sensors attached directly to the skin and traditional optical sensors on the clothing.",
+    tldr: "This paper proposes a system, EMob, for accurately estimating body motion under clothing with EM and optical sensors.",
     imageUrl:
       "/images/mocap_pub.png",
     // award: "🏆 Best Paper Award",

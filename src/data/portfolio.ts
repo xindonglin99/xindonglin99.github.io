@@ -11,9 +11,9 @@ export interface Portfolio {
 export const portfolioData: Portfolio[] = [
   // Example entry
   {
-    title: "Learning to plan in bouldering (Ongoing)",
+    title: "Capability-Aware Planning on Bouldering Problems",
     description:
-      "This project tries to learn a high-level planner that accounts for both the capability of the low-level controller and the hand hold pattern to solve hard bouldering problems. The picture is a toy example on a donut wall. More updates incoming!",
+      "This project aims to solve hard climbing wall problems with trajectories fitting both the capability of the pretrained policy and hold patterns. More updates incoming!",
     technologies: ["RL", "IsaacLab", "Planning"],
     // projectUrl: "https://project-demo.com",
     imageUrl:
@@ -24,7 +24,7 @@ export const portfolioData: Portfolio[] = [
   {
     title: "GPU-accelerated Humanoid Stepping",
     description:
-      "This project reimplements the ALLSTEPS paper in IsaacLab. It analyzes the performance of ALLSTEPS on different simulations and optimizes the reward function to improve the performance of the humanoid robot in simulation. More updates are coming soon.",
+      "This project reimplements the ALLSTEPS paper in IsaacLab. Huge speed boost compare to PyBullet.",
     technologies: ["IsaacLab", "RL"],
     // projectUrl: "https://project-demo.com",
     imageUrl:
@@ -35,7 +35,7 @@ export const portfolioData: Portfolio[] = [
   {
     title: "Robot2robot: Enhance imitation trajectory transfer with reinforcement learning",
     description:
-      "This project uses RL to adapt open loop imitation trajectories from a source robot to a target robot with different degrees of freedom (DOF).",
+      "This project uses RL to adapt open loop imitation trajectories from a source robot to a target robot with different DOFs.",
     technologies: ["Python", "C++", "RaiSim", "RL"],
     paperUrl: ["Report","/pdfs/CPSC554X_Report.pdf"],
     imageUrl:
