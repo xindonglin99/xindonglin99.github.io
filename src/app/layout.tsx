@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Noto_Serif, PT_Serif } from "next/font/google";
+import { Geist, Geist_Mono, Noto_Serif, PT_Serif, Zhi_Mang_Xing, Titillium_Web } from "next/font/google";
 import "./globals.css";
 import { aboutMe } from "@/data/aboutme";
 import { customMetadata } from "@/data/title-description";
@@ -25,6 +25,19 @@ const ptSerif = PT_Serif({
   weight: ["400", "700"],
 });
 
+const zhiMangXing = Zhi_Mang_Xing({
+  variable: "--font-zhi-mang-xing",
+  subsets: ["latin"],
+  weight: ["400"],
+});
+
+const titilliumWeb = Titillium_Web({
+  variable: "--font-titillium-web",
+  subsets: ["latin"],
+  weight: ["300", "400", "600", "700"],
+  style: ["normal", "italic"],
+});
+
 export const metadata: Metadata = {
   title: customMetadata.title || aboutMe.name,
   description: customMetadata.description || aboutMe.description,
@@ -41,7 +54,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${notoSerif.variable} ${ptSerif.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${notoSerif.variable} ${ptSerif.variable} ${zhiMangXing.variable} ${titilliumWeb.variable} antialiased bg-[#FFFCF8]`}
       >
         <main className="">{children}</main>
         <footer className="border-t border-neutral-200 dark:border-neutral-800 bg-[#FFFCF8]">

@@ -36,7 +36,11 @@ export function ExperienceEntry({ experience }: { experience: Experience }) {
           </p>
         )}
         {experience.description && (
-          <p className="text-sm text-zinc-600 leading-relaxed mt-2" dangerouslySetInnerHTML={{ __html: experience.description }} />
+          <p
+            className="text-sm text-zinc-600 leading-relaxed mt-2"
+            style={{ fontFamily: "var(--font-titillium-web)" }}
+            dangerouslySetInnerHTML={{ __html: experience.description }}
+          />
         )}
       </div>
     </div>

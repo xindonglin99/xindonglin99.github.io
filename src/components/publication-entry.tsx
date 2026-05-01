@@ -16,7 +16,7 @@ export function PublicationEntry({
             alt={publication.title}
             width={160}
             height={200}
-            className="rounded-lg transition-all duration-300"
+            className="rounded-lg transition-all duration-300 drop-shadow-[0_8px_8px_rgba(0,0,0,0.8)]"
           />
         </div>
       )}
@@ -75,7 +75,10 @@ export function PublicationEntry({
           )}
         </div>
         {publication.tldr && (
-          <p className="text-sm italic text-zinc-600 mt-4">
+          <p
+            className="text-sm italic text-zinc-600 mt-4"
+            style={{ fontFamily: "var(--font-titillium-web)" }}
+          >
             {publication.tldr}
           </p>
         )}

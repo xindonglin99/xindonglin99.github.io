@@ -25,7 +25,12 @@ export function NewsEntry({ news }: { news: News }) {
             news.title
           )}
         </h3>
-        <p className="text-sm text-zinc-600">{news.description}</p>
+        <p
+          className="text-sm text-zinc-600"
+          style={{ fontFamily: "var(--font-titillium-web)" }}
+        >
+          {news.description}
+        </p>
       </div>
       <div className="flex flex-row gap-4">
         {news.imageUrl && (
@@ -35,7 +40,7 @@ export function NewsEntry({ news }: { news: News }) {
                     alt={news.title}
                     width={160}
                     height={200}
-                    className="rounded-lg"
+                    className="rounded-lg drop-shadow-[0_8px_8px_rgba(0,0,0,0.8)]"
                   />
                 </div>
               )}

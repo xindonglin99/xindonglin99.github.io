@@ -12,7 +12,7 @@ export function PortfolioEntry({ portfolio }: { portfolio: Portfolio }) {
             alt={portfolio.title}
             width={160}
             height={200}
-            className="rounded-lg"
+            className="rounded-lg drop-shadow-[0_8px_8px_rgba(0,0,0,0.8)]"
           />
         </div>
       )}
@@ -87,7 +87,10 @@ export function PortfolioEntry({ portfolio }: { portfolio: Portfolio }) {
             </a>
           )}
         </div>
-        <p className="text-sm text-zinc-600 mb-4 mt-4 italic">
+        <p
+          className="text-sm text-zinc-600 mb-4 mt-4 italic"
+          style={{ fontFamily: "var(--font-titillium-web)" }}
+        >
           {portfolio.description}
         </p>
       </div>
