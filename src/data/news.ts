@@ -11,9 +11,9 @@ export const newsData: News[] = [
   {
     date: "Apr 2026",
     title: "Joining Sanctuary AI as ML Engineer Intern",
-    description: "I will be joining Sanctuary AI from June 2026 to January 2027 as a Machine Learning Engineer Intern, working on their Phoenix humanoid robot!",
+    description: "I will be joining Sanctuary AI from July 2026 to January 2027 as a Machine Learning Engineer Intern, working on their Phoenix humanoid robot!",
     link: "https://sanctuary.ai",
-    imageUrl: "/images/phoenix_robot.jpg",
+    imageUrl: "/images/dex_hand.png",
   },
   {
     date: "Nov 2025",

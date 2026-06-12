@@ -5,18 +5,35 @@ import { Portfolio } from "@/data/portfolio";
 export function PortfolioEntry({ portfolio }: { portfolio: Portfolio }) {
   return (
     <div className="flex flex-col sm:flex-row gap-6">
-      {portfolio.imageUrl && (
+      {(portfolio.videoUrl || portfolio.imageUrl) && (
         <div className="w-1/4 min-w-[160px] relative">
-          <Image
-            src={portfolio.imageUrl}
-            alt={portfolio.title}
-            width={160}
-            height={200}
-            className="rounded-lg drop-shadow-[0_8px_8px_rgba(0,0,0,0.8)]"
-          />
+          {portfolio.videoUrl ? (
+            <video
+              src={portfolio.videoUrl}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="rounded-lg drop-shadow-[0_8px_8px_rgba(0,0,0,0.8)]"
+              style={{ width: "100%", height: "auto" }}
+            />
+          ) : (
+            <Image
+              src={portfolio.imageUrl!}
+              alt={portfolio.title}
+              width={160}
+              height={200}
+              className="rounded-lg drop-shadow-[0_8px_8px_rgba(0,0,0,0.8)]"
+            />
+          )}
         </div>
       )}
       <div className="flex flex-col flex-1">
+        {portfolio.subtitle && (
+          <p className="text-xs text-zinc-500 mb-2">
+            {portfolio.subtitle}
+          </p>
+        )}
         <h3 className="font-serif text-md mb-3">
           {portfolio.projectUrl ? (
             <a

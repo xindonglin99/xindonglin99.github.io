@@ -1,8 +1,10 @@
 export interface Portfolio {
   title: string;
+  subtitle?: string;
   description: string;
   technologies?: string[];
   imageUrl?: string;
+  videoUrl?: string;
   projectUrl?: string;
   codeUrl?: string;
   paperUrl?: string[];
@@ -12,12 +14,12 @@ export const portfolioData: Portfolio[] = [
   // Example entry
   {
     title: "Capability-Aware Planning on Bouldering Problems",
+    subtitle: "MSc Thesis 2026",
     description:
-      "This project aims to solve hard climbing wall problems with trajectories fitting both the capability of the pretrained policy and hold patterns. More updates incoming!",
+      "This thesis teaches a simulated humanoid robot to climb complex walls by combining learned movement skills with route planning. The system can avoid difficult areas and guide an RL policy towards the goal.",
     technologies: ["RL", "IsaacLab", "Planning"],
     // projectUrl: "https://project-demo.com",
-    imageUrl:
-      "/images/climbing.gif",
+    videoUrl: "/videos/snake_orbit_around.mp4",
     // codeUrl: "https://github.com/username/project",
   },
 
