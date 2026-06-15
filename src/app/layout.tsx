@@ -1,8 +1,17 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Noto_Serif, PT_Serif, Zhi_Mang_Xing, Titillium_Web } from "next/font/google";
+import Script from "next/script";
+import {
+  Geist,
+  Geist_Mono,
+  Noto_Serif,
+  PT_Serif,
+  Zhi_Mang_Xing,
+  Titillium_Web,
+} from "next/font/google";
 import "./globals.css";
 import { aboutMe } from "@/data/aboutme";
 import { customMetadata } from "@/data/title-description";
+import { VisitorCounter } from "@/components/visitor-counter";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -38,6 +47,9 @@ const titilliumWeb = Titillium_Web({
   style: ["normal", "italic"],
 });
 
+const cloudflareWebAnalyticsToken =
+  process.env.NEXT_PUBLIC_CLOUDFLARE_WEB_ANALYTICS_TOKEN;
+
 export const metadata: Metadata = {
   title: customMetadata.title || aboutMe.name,
   description: customMetadata.description || aboutMe.description,
@@ -61,7 +73,7 @@ export default function RootLayout({
           <div className="flex flex-row mx-auto max-w-7xl px-6 py-12 md:flex md:items-start md:justify-between ">
             <div className="mb-4 text-sm text-neutral-600 dark:text-neutral-400">
               <p>
-                © {new Date().getFullYear()} {aboutMe.name}.
+                Copyright {new Date().getFullYear()} {aboutMe.name}.
               </p>
               {aboutMe.secretDescription && (
                 <p className="text-xs text-neutral-600 dark:text-neutral-400 mt-4">
@@ -79,9 +91,20 @@ export default function RootLayout({
                   research-website-template
                 </a>
               </p>
+              <VisitorCounter />
             </div>
           </div>
         </footer>
+        {cloudflareWebAnalyticsToken && (
+          <Script
+            defer
+            src="https://static.cloudflareinsights.com/beacon.min.js"
+            data-cf-beacon={JSON.stringify({
+              token: cloudflareWebAnalyticsToken,
+            })}
+            strategy="afterInteractive"
+          />
+        )}
       </body>
     </html>
   );

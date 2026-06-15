@@ -1,0 +1,11 @@
+name = "xindonglin-visitor-counter"
+main = "worker.js"
+compatibility_date = "2026-06-15"
+
+[vars]
+ALLOWED_ORIGINS = "https://xindonglin99.github.io,http://localhost:3000"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "visitor-counter"
+database_id = "replace-with-your-d1-database-id"

@@ -3,6 +3,8 @@ import { ArrowUpRight } from "lucide-react";
 import { Portfolio } from "@/data/portfolio";
 
 export function PortfolioEntry({ portfolio }: { portfolio: Portfolio }) {
+  const isAnimatedGif = portfolio.imageUrl?.toLowerCase().endsWith(".gif");
+
   return (
     <div className="flex flex-col sm:flex-row gap-6">
       {(portfolio.videoUrl || portfolio.imageUrl) && (
@@ -23,6 +25,7 @@ export function PortfolioEntry({ portfolio }: { portfolio: Portfolio }) {
               alt={portfolio.title}
               width={160}
               height={200}
+              unoptimized={isAnimatedGif}
               className="rounded-lg drop-shadow-[0_8px_8px_rgba(0,0,0,0.8)]"
             />
           )}
